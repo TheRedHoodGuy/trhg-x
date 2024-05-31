@@ -1250,32 +1250,5 @@
         <span>Okpalannajiaku Xavier Chimezie</span>. © TheRedHoodGuy 2024</span
       >
     </footer>
-
-    <script>
-      // Ensure the ScrollToPlugin is registered with GSAP
-      gsap.registerPlugin(ScrollToPlugin);
-
-      // Select all anchor elements that link to an internal section
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault(); // Prevent the default anchor click behavior
-
-          // Get the target element to scroll to
-          const targetElement = document.querySelector(
-            this.getAttribute("href"),
-          );
-
-          // Use GSAP to animate the scroll to the target element
-          gsap.to(window, {
-            duration: 1, // Duration of the animation (in seconds)
-            scrollTo: {
-              y: targetElement, // Target element to scroll to
-              offsetY: 70, // Offset from the top (in pixels)
-            },
-            ease: "power2inOut", // Easing function for the animation
-          });
-        });
-      });
-    </script>
   </body>
 </html>
