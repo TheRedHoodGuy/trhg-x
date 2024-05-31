@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" style="scroll-behavior: smooth">
   <head>
     <title>
       TheRedHoodGuy - Okpalannajiaku Xavier | Aspiring Fullstack Web Developer
@@ -38,6 +38,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.blobity.dev/by.js"></script>
     <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollSmoother.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <!--Cdns -->
 
     <!--TailwindCSS Config-->
@@ -66,13 +69,14 @@
   >
     <header
       id="navHead"
-      class="fixed z-10 left-0 right-0 top-0 bg-white dark:bg-[#221f32] p-5 xl:p-6 border-b-2 xl:border-b-0 border-xed flex items-center justify-start lg:px-16 xl:px-24"
+      class="fixed z-40 left-0 right-0 top-0 bg-white dark:bg-[#221f32] p-5 xl:p-6 border-b-2 xl:border-b-0 border-xed flex items-center justify-start lg:px-16 xl:px-24"
     >
-      <span
+      <a
+        href="#trhg"
         onmouseover="blobity.bounce()"
         data-blobity-tooltip="Xavier Okpalannajiaku Chimezie"
         class="text-lg font-medium dark:text-white z-20"
-        >The<span class="text-xed pointer-events-none">Red</span>HoodGuy</span
+        >The<span class="text-xed pointer-events-none">Red</span>HoodGuy</a
       >
       <button id="menuOpener" class="ml-auto">
         <i class="bi bi-list text-2xl flex dark:text-white xl:hidden"></i>
@@ -83,25 +87,30 @@
       >
         <ul class="flex gap-16 items-center justify-center">
           <li>
-            <a href="#" class="hover:text-cyan-500 p-2 duration-150"
+            <a href="#trhg" class="hover:text-cyan-500 p-2 duration-150"
               >TheRedHoodGuy?</a
             >
           </li>
           <li>
-            <a href="#" class="hover:text-cyan-500 p-2 duration-150">Prowess</a>
+            <a href="#prowess" class="hover:text-cyan-500 p-2 duration-150"
+              >Prowess</a
+            >
           </li>
           <li>
-            <a href="#" class="hover:text-cyan-500 p-2 duration-150"
+            <a href="#creations" class="hover:text-cyan-500 p-2 duration-150"
               >Creations</a
             >
           </li>
           <li>
-            <a href="#" class="hover:text-cyan-500 p-2 duration-150"
+            <a href="#expertise" class="hover:text-cyan-500 p-2 duration-150"
               >Expertise</a
             >
           </li>
           <li>
-            <a href="#" class="hover:text-cyan-500 p-2 duration-150"
+            <a
+              href="https://wa.me/23407049628148"
+              target="_blank"
+              class="hover:text-cyan-500 p-2 duration-150"
               >Talk to me</a
             >
           </li>
@@ -132,7 +141,7 @@
             >
               <a
                 class="p-3 bg-gray-200 dark:bg-[#35314dcf] dark:text-white bg-opacity-40 rounded-sm w-full"
-                href="#"
+                href="#trhg"
                 >TheRedHoodGuy?</a
               >
             </li>
@@ -141,7 +150,7 @@
             >
               <a
                 class="p-3 bg-gray-200 dark:bg-[#35314dcf] dark:text-white bg-opacity-40 rounded-sm w-full"
-                href="#"
+                href="#prowess"
                 >Prowess</a
               >
             </li>
@@ -150,7 +159,7 @@
             >
               <a
                 class="p-3 bg-gray-200 dark:bg-[#35314dcf] dark:text-white bg-opacity-40 rounded-sm w-full"
-                href="#"
+                href="#creations"
                 >Creations</a
               >
             </li>
@@ -159,7 +168,7 @@
             >
               <a
                 class="p-3 bg-gray-200 dark:bg-[#35314dcf] dark:text-white bg-opacity-40 rounded-sm w-full"
-                href="#"
+                href="#expertise"
                 >Expertise</a
               >
             </li>
@@ -180,7 +189,7 @@
               >
                 <a
                   class="p-3 bg-xed rounded-sm w-full flex items-center text-white font-medium"
-                  href="javaascript:void(0)"
+                  href="javascript:void(0)"
                   onclick="alert('CV Unavailable at the moment  :\)')"
                   >Download CV
                   <i
@@ -204,6 +213,7 @@
     </header>
 
     <section
+      id="trhg"
       class="w-full h-screen flex justify-center items-center px-2 dark:bg-[#232034] dark:text-white lg:px-16 xl:px-24"
     >
       <main
@@ -222,10 +232,10 @@
         <div
           class="flex flex-col gap-4 xl:gap-8 justify-center items-center overflow-hidden"
         >
-          <h1 class="text-3xl xl:text-5xl text-center">
+          <h1 id="text1" class="text-3xl xl:text-5xl text-center">
             I'm Xavier Okpalannajiaku
           </h1>
-          <h2 class="text-2xl xl:text-4xl text-center">
+          <h2 id="text" class="text-2xl xl:text-4xl text-center">
             The<span
               class="text-xed"
               onmouseover="blobity.bounce()"
@@ -269,12 +279,14 @@
     </section>
 
     <section
-      class="w-full flex flex-col gap-10 justify-center items-center px-2 dark:bg-[#232034] dark:text-white py-10 lg:px-16 xl:px-24"
+      id="prowess"
+      class="w-full flex flex-col gap-10 justify-center items-center px-2 dark:bg-[#232034] dark:text-white py-10 pt-16 lg:px-16 xl:px-24"
     >
-      <h3 class="text-3xl xl:w-full xl:text-left">Versatility</h3>
+      <h3 id="head1" class="text-3xl xl:w-full xl:text-left">Versatility</h3>
       <div class="xl:hidden w-full grid grid-cols-1 lg:grid-cols-2 gap-4">
         <!---->
         <div
+          id="html"
           class="bg-white dark:bg-[#35314dcf] dark:text-white dark:outline-none outline outline-1 outline-gray-100 p-6 w-full rounded-sm flex flex-col gap-6"
         >
           <div class="w-full flex items-center justify-between">
@@ -289,6 +301,7 @@
 
         <!---->
         <div
+          id="css"
           class="bg-white dark:bg-[#35314dcf] dark:text-white dark:outline-none outline outline-1 outline-gray-100 p-6 w-full rounded-sm flex flex-col gap-6"
         >
           <div class="w-full flex items-center justify-between">
@@ -303,6 +316,7 @@
 
         <!---->
         <div
+          id="js"
           class="bg-white dark:bg-[#35314dcf] dark:text-white dark:outline-none outline outline-1 outline-gray-100 p-6 w-full rounded-sm flex flex-col gap-6"
         >
           <div class="w-full flex items-center justify-between">
@@ -317,6 +331,7 @@
 
         <!---->
         <div
+          id="tcss"
           class="bg-white dark:bg-[#35314dcf] dark:text-white dark:outline-none outline outline-1 outline-gray-100 p-6 w-full rounded-sm flex flex-col gap-6"
         >
           <div class="w-full flex items-center justify-between">
@@ -331,6 +346,7 @@
 
         <!---->
         <div
+          id="rjs"
           class="bg-white dark:bg-[#35314dcf] dark:text-white dark:outline-none outline outline-1 outline-gray-100 p-6 w-full rounded-sm flex flex-col gap-6"
         >
           <div class="w-full flex items-center justify-between">
@@ -345,6 +361,7 @@
 
         <!---->
         <div
+          id="c"
           class="bg-white dark:bg-[#35314dcf] dark:text-white dark:outline-none outline outline-1 outline-gray-100 p-6 w-full rounded-sm flex flex-col gap-6"
         >
           <div class="w-full flex items-center justify-between">
@@ -359,6 +376,7 @@
 
         <!---->
         <div
+          id="cpp"
           class="bg-white dark:bg-[#35314dcf] dark:text-white dark:outline-none outline outline-1 outline-gray-100 p-6 w-full rounded-sm flex flex-col gap-6"
         >
           <div class="w-full flex items-center justify-between">
@@ -373,6 +391,7 @@
 
         <!---->
         <div
+          id="java"
           class="bg-white dark:bg-[#35314dcf] dark:text-white dark:outline-none outline outline-1 outline-gray-100 p-6 w-full rounded-sm flex flex-col gap-6"
         >
           <div class="w-full flex items-center justify-between">
@@ -388,121 +407,129 @@
       <div class="grid-cols-8 gap-10 w-full justify-start hidden xl:grid">
         <!---->
         <div
+          id="pchtml"
           onmouseover="blobity.bounce()"
           data-blobity-magnetic="true"
           data-blobity-tooltip="Started this in 2016"
-          class="col-span-4 border-l-4 border-l-xed p-4 flex justify-between items-center dark:bg-[#35314dcf] dark:text-white"
+          class="pchtml col-span-4 border-l-4 border-l-xed p-4 flex justify-between items-center dark:bg-[#35314dcf] dark:text-white"
         >
-          <div><span>HTML5</span></div>
+          <div class="pointer-events-none"><span>HTML5</span></div>
           <div
-            class="h-3 outline outline-1 outline-xed w-[70%] overflow-hidden relative after:h-3 after:absolute after:bg-xed after:w-[75%]"
+            class="pointer-events-none h-3 outline outline-1 outline-xed w-[70%] overflow-hidden relative after:h-3 after:absolute after:bg-xed after:w-[75%]"
           ></div>
-          <div><span>75%</span></div>
+          <div class="pointer-events-none"><span>75%</span></div>
         </div>
         <!---->
 
         <!---->
         <div
+          id="pccss"
           onmouseover="blobity.bounce()"
           data-blobity-magnetic="true"
           data-blobity-tooltip="Also started 2016"
           class="col-span-4 border-l-4 border-l-xed p-4 flex justify-between items-center dark:bg-[#35314dcf] dark:text-white"
         >
-          <div><span>CSS3</span></div>
+          <div class="pointer-events-none"><span>CSS3</span></div>
           <div
-            class="h-3 outline outline-1 outline-xed w-[70%] overflow-hidden relative after:h-3 after:absolute after:bg-xed after:w-[73%]"
+            class="pointer-events-none h-3 outline outline-1 outline-xed w-[70%] overflow-hidden relative after:h-3 after:absolute after:bg-xed after:w-[73%]"
           ></div>
-          <div><span>73%</span></div>
+          <div class="pointer-events-none"><span>73%</span></div>
         </div>
         <!---->
 
         <!---->
         <div
+          id="pcjs"
           onmouseover="blobity.bounce()"
           data-blobity-magnetic="true"
           data-blobity-tooltip="Do i really know Javascript?"
           class="col-span-4 border-l-4 border-l-xed p-4 flex justify-between items-center dark:bg-[#35314dcf] dark:text-white"
         >
-          <div><span>Javascript</span></div>
+          <div class="pointer-events-none"><span>Javascript</span></div>
           <div
-            class="h-3 outline outline-1 outline-xed w-[70%] overflow-hidden relative after:h-3 after:absolute after:bg-xed after:w-[34%]"
+            class="pointer-events-none h-3 outline outline-1 outline-xed w-[70%] overflow-hidden relative after:h-3 after:absolute after:bg-xed after:w-[34%]"
           ></div>
-          <div><span>34%</span></div>
+          <div class="pointer-events-none"><span>34%</span></div>
         </div>
         <!---->
 
         <!---->
         <div
+          id="pctcss"
           onmouseover="blobity.bounce()"
           data-blobity-magnetic="true"
           data-blobity-tooltip="TailwindCSS is the GOAT!!"
           class="col-span-4 border-l-4 border-l-xed p-4 flex justify-between items-center dark:bg-[#35314dcf] dark:text-white"
         >
-          <div><span>TailwindCSS</span></div>
+          <div class="pointer-events-none"><span>TailwindCSS</span></div>
           <div
-            class="h-3 outline outline-1 outline-xed w-[70%] overflow-hidden relative after:h-3 after:absolute after:bg-xed after:w-[55%]"
+            class="pointer-events-none h-3 outline outline-1 outline-xed w-[70%] overflow-hidden relative after:h-3 after:absolute after:bg-xed after:w-[55%]"
           ></div>
-          <div><span>55%</span></div>
+          <div class="pointer-events-none"><span>55%</span></div>
         </div>
         <!---->
 
         <!---->
         <div
+          id="pcrjs"
           onmouseover="blobity.bounce()"
           data-blobity-magnetic="true"
           data-blobity-tooltip="React is harrddddddd :("
           class="col-span-4 border-l-4 border-l-xed p-4 flex justify-between items-center dark:bg-[#35314dcf] dark:text-white"
         >
-          <div><span>ReactJS</span></div>
+          <div class="pointer-events-none"><span>ReactJS</span></div>
           <div
-            class="h-3 outline outline-1 outline-xed w-[70%] overflow-hidden relative after:h-3 after:absolute after:bg-xed after:w-[10%]"
+            class="pointer-events-none h-3 outline outline-1 outline-xed w-[70%] overflow-hidden relative after:h-3 after:absolute after:bg-xed after:w-[10%]"
           ></div>
-          <div><span>10%</span></div>
+          <div class="pointer-events-none"><span>10%</span></div>
         </div>
         <!---->
 
         <!---->
         <div
+          id="pcc"
           onmouseover="blobity.bounce()"
           data-blobity-magnetic="true"
           data-blobity-tooltip="Babcock Things"
           class="col-span-4 border-l-4 border-l-xed p-4 flex justify-between items-center dark:bg-[#35314dcf] dark:text-white"
         >
-          <div><span>C</span></div>
+          <div class="pointer-events-none"><span>C</span></div>
           <div
-            class="h-3 outline outline-1 outline-xed w-[70%] overflow-hidden relative after:h-3 after:absolute after:bg-xed after:w-[15%]"
+            class="pointer-events-none h-3 outline outline-1 outline-xed w-[70%] overflow-hidden relative after:h-3 after:absolute after:bg-xed after:w-[15%]"
           ></div>
-          <div><span>15%</span></div>
+          <div class="pointer-events-none"><span>15%</span></div>
         </div>
         <!---->
 
         <!---->
         <div
+          id="pccpp"
           onmouseover="blobity.bounce()"
           data-blobity-magnetic="true"
           data-blobity-tooltip="Learnt this to pass that exam ;)"
           class="col-span-4 border-l-4 border-l-xed p-4 flex justify-between items-center dark:bg-[#35314dcf] dark:text-white"
         >
-          <div><span>C++</span></div>
+          <div class="pointer-events-none"><span>C++</span></div>
           <div
-            class="h-3 outline outline-1 outline-xed w-[70%] overflow-hidden relative after:h-3 after:absolute after:bg-xed after:w-[30%]"
+            class="pointer-events-none h-3 outline outline-1 outline-xed w-[70%] overflow-hidden relative after:h-3 after:absolute after:bg-xed after:w-[30%]"
           ></div>
-          <div><span>30%</span></div>
+          <div class="pointer-events-none"><span>30%</span></div>
         </div>
         <!---->
 
         <!---->
         <div
+          id="pcjava"
           onmouseover="blobity.bounce()"
           data-blobity-magnetic="true"
           data-blobity-tooltip="Still progressing for sft dev"
           class="col-span-4 border-l-4 border-l-xed p-4 flex justify-between items-center dark:bg-[#35314dcf] dark:text-white"
         >
-          <div><span>JAVA</span></div>
+          <div class="pointer-events-none"><span>JAVA</span></div>
           <div
-            class="h-3 outline outline-1 outline-xed w-[70%] overflow-hidden relative after:h-3 after:absolute after:bg-xed after:w-[35%]"
+            class="pointer-events-none h-3 outline outline-1 outline-xed w-[70%] overflow-hidden relative after:h-3 after:absolute after:bg-xed after:w-[35%]"
           ></div>
-          <div><span>35%</span></div>
+          <div class="pointer-events-none"><span>35%</span></div>
         </div>
         <!---->
       </div>
@@ -510,6 +537,7 @@
       <div class="w-full grid grid-col-1 lg:grid-cols-2 xl:grid-cols-8 gap-4">
         <!-- Grid 1 | Web Developer -->
         <div
+          id="snom"
           onmouseover="blobity.bounce()"
           data-blobity-magnetic="true"
           data-blobity-tooltip="Skill Number One, "
@@ -538,6 +566,7 @@
 
         <!-- Grid 2 | Web Designer -->
         <div
+          id="sntm"
           onmouseover="blobity.bounce()"
           data-blobity-magnetic="true"
           data-blobity-tooltip="Skill Number 2, "
@@ -566,6 +595,7 @@
 
         <!-- Grid 3 | Musician -->
         <div
+          id="snthm"
           onmouseover="blobity.bounce()"
           data-blobity-magnetic="true"
           data-blobity-tooltip="Skill Number 3, "
@@ -595,6 +625,7 @@
 
         <!-- Grid 4 | Graphic Designer -->
         <div
+          id="snfm"
           onmouseover="blobity.bounce()"
           data-blobity-magnetic="true"
           data-blobity-tooltip="The List goes on brev"
@@ -623,6 +654,7 @@
 
         <!-- Grid 5 | Animator -->
         <div
+          id="snfim"
           onmouseover="blobity.bounce()"
           data-blobity-magnetic="true"
           data-blobity-tooltip="One guy, 5 skills. Shey you dey whine me ni"
@@ -652,7 +684,8 @@
     </section>
 
     <section
-      class="w-full flex flex-col gap-10 md:gap-16 items-center justify-center px-2 pt-16 dark:bg-[#221f32] dark:text-white lg:px-16 xl:px-28 md:px-32"
+      id="creations"
+      class="z-[0] w-full flex flex-col gap-10 md:gap-16 items-center justify-center px-2 pt-16 dark:bg-[#221f32] dark:text-white lg:px-16 xl:px-28 md:px-32"
     >
       <h3 class="text-3xl xl:w-full xl:text-left">
         My <span class="text-xed">Actual</span> Shit
@@ -660,6 +693,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full xl:hidden">
         <!---->
         <div
+          id="one"
           class="w-full flex flex-col gap-6 p-4 rounded-sm overflow-hidden outline outline-1 outline-gray-200 bg-white dark:bg-[#35314dcf] dark:text-white dark:outline-none"
         >
           <div class="w-full rounded-sm overflow-hidden">
@@ -691,6 +725,7 @@
 
         <!---->
         <div
+          id="two"
           class="w-full flex flex-col gap-6 p-4 rounded-sm overflow-hidden outline outline-1 outline-gray-200 bg-white dark:bg-[#35314dcf] dark:text-white dark:outline-none"
         >
           <div class="w-full rounded-sm overflow-hidden">
@@ -699,40 +734,6 @@
           <div class="w-full flex flex-col gap-3">
             <h4 class="text-xl font-medium">Omelette recipe page</h4>
             <p>A simple responsive recipe page for an omelette.</p>
-            <span class="ml-auto text-gray-500 text-md dark:text-slate-500"
-              >HTML5 | TailwindCSS</span
-            >
-          </div>
-          <div class="flex flex-col gap-3 w-full">
-            <a
-              target="_blank"
-              href="https://github.com/TheRedHoodGuy/social-links-page"
-              class="flex gap-3 p-[11px] justify-center items-center bg-white outline outline-1 outline-xed rounded-sm text-xed dark:bg-[#3c3856cf] dark:bg-opacity-25 dark:text-white dark:outline-none"
-              >View Code on gitHub <i class="bi bi-box-arrow-up-right"></i
-            ></a>
-            <a
-              target="_blank"
-              href="https://theredhoodguy.github.io/social-links-page/"
-              class="flex gap-3 p-3 justify-center items-center bg-xed rounded-sm text-white"
-              >View Live Page <i class="bi bi-box-arrow-up-right"></i
-            ></a>
-          </div>
-        </div>
-        <!---->
-
-        <!---->
-        <div
-          class="w-full flex flex-col gap-6 p-4 rounded-sm overflow-hidden outline outline-1 outline-gray-200 bg-white dark:bg-[#35314dcf] dark:text-white dark:outline-none"
-        >
-          <div class="w-full rounded-sm overflow-hidden">
-            <img src="/images/desktop-preview - 3.jpg" alt="Preview One" />
-          </div>
-          <div class="w-full flex flex-col gap-3">
-            <h4 class="text-xl font-medium">Social links page</h4>
-            <p>
-              A page showcasing every single link to where I am accesible on,
-              you shoucl check it out.
-            </p>
             <span class="ml-auto text-gray-500 text-md dark:text-slate-500"
               >HTML5 | TailwindCSS</span
             >
@@ -756,6 +757,42 @@
 
         <!---->
         <div
+          id="three"
+          class="w-full flex flex-col gap-6 p-4 rounded-sm overflow-hidden outline outline-1 outline-gray-200 bg-white dark:bg-[#35314dcf] dark:text-white dark:outline-none"
+        >
+          <div class="w-full rounded-sm overflow-hidden">
+            <img src="/images/desktop-preview - 3.jpg" alt="Preview One" />
+          </div>
+          <div class="w-full flex flex-col gap-3">
+            <h4 class="text-xl font-medium">Social links page</h4>
+            <p>
+              A page showcasing every single link to where I am accesible on,
+              you should check it out.
+            </p>
+            <span class="ml-auto text-gray-500 text-md dark:text-slate-500"
+              >HTML5 | TailwindCSS</span
+            >
+          </div>
+          <div class="flex flex-col gap-3 w-full">
+            <a
+              target="_blank"
+              href="https://github.com/TheRedHoodGuy/social-links-page"
+              class="flex gap-3 p-[11px] justify-center items-center bg-white outline outline-1 outline-xed rounded-sm text-xed dark:bg-[#3c3856cf] dark:bg-opacity-25 dark:text-white dark:outline-none"
+              >View Code on gitHub <i class="bi bi-box-arrow-up-right"></i
+            ></a>
+            <a
+              target="_blank"
+              href="https://theredhoodguy.github.io/social-links-page/"
+              class="flex gap-3 p-3 justify-center items-center bg-xed rounded-sm text-white"
+              >View Live Page <i class="bi bi-box-arrow-up-right"></i
+            ></a>
+          </div>
+        </div>
+        <!---->
+
+        <!---->
+        <div
+          id="four"
           class="w-full flex flex-col gap-6 p-4 rounded-sm overflow-hidden outline outline-1 outline-gray-200 bg-white dark:bg-[#35314dcf] dark:text-white dark:outline-none"
         >
           <div class="w-full rounded-sm overflow-hidden">
@@ -790,6 +827,7 @@
 
         <!---->
         <div
+          id="five"
           class="w-full flex flex-col gap-6 p-4 rounded-sm overflow-hidden outline outline-1 outline-gray-200 bg-white dark:bg-[#35314dcf] dark:text-white dark:outline-none"
         >
           <div class="w-full rounded-sm overflow-hidden">
@@ -825,6 +863,7 @@
       <div class="grid-cols-3 gap-10 w-full hidden xl:grid">
         <!---->
         <div
+          id="pone"
           class="rounded-xl overflow-hidden relative h-fit shadow-lg group cursor-pointer hover:-translate-x-1 hover:-translate-y-2 hover:shadow-xl duration-100"
         >
           <div
@@ -850,14 +889,14 @@
 
               <div class="w-full flex mt-8 gap-8 justify-center items-center">
                 <a
-                  href="#"
+                  href="https://github.com/TheRedHoodGuy/interactive-rating-component"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="rounded-full hover:bg-white outline outline-1 outline-white hover:text-[#FF0000] duration-150 py-2 px-3 bg-transparent text-white"
                   >View on GitHub</a
                 >
                 <a
-                  href="#"
+                  href="https://theredhoodguy.github.io/interactive-rating-component/"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="rounded-full hover:bg-white hover:shadow-md hover:text-[#FF0000] duration-150 py-2 px-3 bg-transparent outline outline-1 outline-white text-white"
@@ -872,6 +911,7 @@
 
         <!---->
         <div
+          id="ptwo"
           class="rounded-xl overflow-hidden relative h-fit shadow-lg group cursor-pointer hover:-translate-x-1 hover:-translate-y-2 hover:shadow-xl duration-100"
         >
           <div
@@ -895,14 +935,14 @@
 
               <div class="w-full flex mt-8 gap-8 justify-center items-center">
                 <a
-                  href="#"
+                  href="https://github.com/TheRedHoodGuy/recipe-page-simple"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="rounded-full hover:bg-white outline outline-1 outline-white hover:text-[#FF0000] duration-150 py-2 px-3 bg-transparent text-white"
                   >View on GitHub</a
                 >
                 <a
-                  href="#"
+                  href="https://theredhoodguy.github.io/recipe-page-simple/"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="rounded-full hover:bg-white hover:shadow-md hover:text-[#FF0000] duration-150 py-2 px-3 bg-transparent outline outline-1 outline-white text-white"
@@ -917,6 +957,7 @@
 
         <!---->
         <div
+          id="pthree"
           class="rounded-xl overflow-hidden relative h-fit shadow-lg group cursor-pointer hover:-translate-x-1 hover:-translate-y-2 hover:shadow-xl duration-100"
         >
           <div
@@ -941,14 +982,14 @@
 
               <div class="w-full flex mt-8 gap-8 justify-center items-center">
                 <a
-                  href="#"
+                  href="https://github.com/TheRedHoodGuy/social-links-page"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="rounded-full hover:bg-white outline outline-1 outline-white hover:text-[#FF0000] duration-150 py-2 px-3 bg-transparent text-white"
                   >View on GitHub</a
                 >
                 <a
-                  href="#"
+                  href="https://theredhoodguy.github.io/social-links-page/"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="rounded-full hover:bg-white hover:shadow-md hover:text-[#FF0000] duration-150 py-2 px-3 bg-transparent outline outline-1 outline-white text-white"
@@ -963,6 +1004,7 @@
 
         <!---->
         <div
+          id="pfour"
           class="rounded-xl overflow-hidden relative h-fit shadow-lg group cursor-pointer hover:-translate-x-1 hover:-translate-y-2 hover:shadow-xl duration-100"
         >
           <div
@@ -1009,6 +1051,7 @@
 
         <!---->
         <div
+          id="pfive"
           class="rounded-xl overflow-hidden relative h-fit shadow-lg group cursor-pointer hover:-translate-x-1 hover:-translate-y-2 hover:shadow-xl duration-100"
         >
           <div
@@ -1033,14 +1076,14 @@
 
               <div class="w-full flex mt-8 gap-8 justify-center items-center">
                 <a
-                  href="#"
+                  href="https://github.com/TheRedHoodGuy/simple-webpage-with-react"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="rounded-full hover:bg-white outline outline-1 outline-white hover:text-[#FF0000] duration-150 py-2 px-3 bg-transparent text-white"
                   >View on GitHub</a
                 >
                 <a
-                  href="#"
+                  href="https://trhg-news-landing-page.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="rounded-full hover:bg-white hover:shadow-md hover:text-[#FF0000] duration-150 py-2 px-3 bg-transparent outline outline-1 outline-white text-white"
@@ -1054,6 +1097,7 @@
         <!---->
 
         <div
+          id="psix"
           onmouseover="blobity.bounce()"
           data-blobity-magnetic="true"
           data-blobity-tooltip="What is it?, haven't I done enough"
@@ -1077,6 +1121,7 @@
     </section>
 
     <section
+      id="expertise"
       class="w-full flex flex-col xl:flex-row gap-16 items-center justify-center px-2 pt-16 xl:pt-32 dark:bg-[#232034] dark:text-white lg:px-16 xl:px-24"
     >
       <div
@@ -1085,8 +1130,13 @@
         data-blobity-tooltip="Half completed, The cycle continues"
         class="w-full flex flex-col justify-center items-center gap-4"
       >
-        <span class="text-xed text-7xl">12+</span>
-        <p class="text-gray-400">Projects Worked on</p>
+        <span
+          id="pw"
+          data-speed="3000"
+          class="counter pointer-events-none text-xed text-7xl"
+          >12</span
+        >
+        <p class="pointer-events-none text-gray-400">Projects Worked on</p>
       </div>
       <div
         onmouseover="blobity.bounce()"
@@ -1094,8 +1144,13 @@
         data-blobity-tooltip="Someone said my site is nice :)"
         class="w-full flex flex-col justify-center items-center gap-4"
       >
-        <span class="text-xed text-7xl">15+</span>
-        <p class="text-gray-400">Positive Feedback</p>
+        <span
+          id="pf"
+          data-speed="3000"
+          class="counter pointer-events-none text-xed text-7xl"
+          >15</span
+        >
+        <p class="pointer-events-none text-gray-400">Positive Feedback</p>
       </div>
       <div
         onmouseover="blobity.bounce()"
@@ -1103,8 +1158,13 @@
         data-blobity-tooltip="i didn't spam, I swear"
         class="w-full flex flex-col justify-center items-center gap-4"
       >
-        <span class="text-xed text-7xl">300+</span>
-        <p class="text-gray-400">Linkedin Connections</p>
+        <span
+          id="lc"
+          data-speed="3000"
+          class="counter pointer-events-none text-xed text-7xl"
+          >300</span
+        >
+        <p class="pointer-events-none text-gray-400">Linkedin Connections</p>
       </div>
       <div
         onmouseover="blobity.bounce()"
@@ -1112,12 +1172,18 @@
         data-blobity-tooltip="And I'm proud of it"
         class="w-full flex flex-col justify-center items-center gap-4"
       >
-        <span class="text-xed text-7xl">1</span>
-        <p class="text-gray-400">Certification</p>
+        <span
+          id="c"
+          data-speed="1000"
+          class="counter pointer-events-none text-xed text-7xl"
+          >1</span
+        >
+        <p class="pointer-events-none text-gray-400">Certification</p>
       </div>
     </section>
 
     <section
+      id="me"
       class="w-full flex flex-col gap-8 xl:gap-12 items-center justify-center px-2 pt-32 pb-10 dark:bg-[#232034] dark:text-white lg:px-16 xl:px-24"
     >
       <h3
@@ -1131,27 +1197,27 @@
       <ul
         class="w-full flex flex-col xl:flex-row gap-10 xl:gap-16 p-4 justify-center items-center"
       >
-        <li>
+        <li id="lkdn">
           <a
             target="_blank"
             href="https://www.linkedin.com/in/xavier-okpalannajiaku-8a07812bb/"
             class="flex flex-col gap-2 items-center text-gray-500 dark:text-gray-400 hover:text-black p-2 dark:hover:text-white"
-            ><i class="bi bi-linkedin text-2xl"></i>Okpalannajiaku Xavier
-            Chimezie</a
+            ><i class="pointer-events-none bi bi-linkedin text-2xl"></i
+            >Okpalannajiaku Xavier Chimezie</a
           >
         </li>
 
-        <li>
+        <li id="mail">
           <a
             target="_blank"
             href="mailto:trhg.xavierokpalannajiaku.mez@gmail.com"
             class="flex flex-col gap-2 items-center text-gray-500 dark:text-gray-400 hover:text-black p-2 dark:hover:text-white"
-            ><i class="bi bi-envelope text-2xl"></i
+            ><i class="pointer-events-none bi bi-envelope text-2xl"></i
             >trhg.xavierokpalannajiaku.mez@gmail.com</a
           >
         </li>
 
-        <li>
+        <li id="wtsp">
           <a
             onmouseover="blobity.bounce()"
             data-blobity-magnetic="true"
@@ -1159,16 +1225,18 @@
             target="_blank"
             href="https://wa.me/23407049628148"
             class="flex flex-col gap-2 items-center text-gray-500 dark:text-gray-400 hover:text-black p-2 dark:hover:text-white"
-            ><i class="bi bi-whatsapp text-2xl"></i>+234 070 4962 8148</a
+            ><i class="pointer-events-none bi bi-whatsapp text-2xl"></i>+234 070
+            4962 8148</a
           >
         </li>
 
-        <li>
+        <li id="insta">
           <a
             target="_blank"
             href="https://www.instagram.com/xavier.draws.stuff/"
             class="flex flex-col gap-2 items-center text-gray-500 dark:text-gray-400 hover:text-black p-2 dark:hover:text-white"
-            ><i class="bi bi-instagram text-2xl"></i>Xavier.Draws.Stuff</a
+            ><i class="pointer-events-none bi bi-instagram text-2xl"></i
+            >Xavier.Draws.Stuff</a
           >
         </li>
       </ul>
@@ -1182,5 +1250,32 @@
         <span>Okpalannajiaku Xavier Chimezie</span>. © TheRedHoodGuy 2024</span
       >
     </footer>
+
+    <script>
+      // Ensure the ScrollToPlugin is registered with GSAP
+      gsap.registerPlugin(ScrollToPlugin);
+
+      // Select all anchor elements that link to an internal section
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault(); // Prevent the default anchor click behavior
+
+          // Get the target element to scroll to
+          const targetElement = document.querySelector(
+            this.getAttribute("href"),
+          );
+
+          // Use GSAP to animate the scroll to the target element
+          gsap.to(window, {
+            duration: 1, // Duration of the animation (in seconds)
+            scrollTo: {
+              y: targetElement, // Target element to scroll to
+              offsetY: 70, // Offset from the top (in pixels)
+            },
+            ease: "power2inOut", // Easing function for the animation
+          });
+        });
+      });
+    </script>
   </body>
 </html>
