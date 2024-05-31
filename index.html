@@ -1,0 +1,1186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>
+      TheRedHoodGuy - Okpalannajiaku Xavier | Aspiring Fullstack Web Developer
+    </title>
+    <link rel="icon" href="assets/images/favicon-32x32.png" />
+    <!--Follows WCAG Requirements-->
+
+    <!--Metas-->
+    <meta charset="UTF-8" />
+    <meta name="time-limit" content="120" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="TheRedHoodGuy | Okpalannajiaku Xavier" />
+    <meta
+      name="description"
+      content="Okpalannajiaku Xavier Chimezie's Portfolio"
+    />
+    <!--Metas-->
+
+    <!--Google Fonts and styles-->
+    <link rel="stylesheet" href="output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <!--Google Fonts-->
+
+    <!--Cdns and Scripts -->
+    <script src="index.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.blobity.dev/by.js"></script>
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <!--Cdns -->
+
+    <!--TailwindCSS Config-->
+    <script>
+      tailwind.config = {
+        darkMode: "selector",
+        theme: {
+          extend: {
+            colors: {
+              xed: "#FF0000",
+            },
+            height: {
+              screen: "100dvh",
+            },
+            width: {
+              screen: "100dvw",
+            },
+          },
+        },
+      };
+    </script>
+    <!--TailwindCSS Config-->
+  </head>
+  <body
+    class="w-screen h-screen font-['Space_Grotesk'] overflow-x-hidden bg-white"
+  >
+    <header
+      id="navHead"
+      class="fixed z-10 left-0 right-0 top-0 bg-white dark:bg-[#221f32] p-5 xl:p-6 border-b-2 xl:border-b-0 border-xed flex items-center justify-start lg:px-16 xl:px-24"
+    >
+      <span
+        onmouseover="blobity.bounce()"
+        data-blobity-tooltip="Xavier Okpalannajiaku Chimezie"
+        class="text-lg font-medium dark:text-white z-20"
+        >The<span class="text-xed pointer-events-none">Red</span>HoodGuy</span
+      >
+      <button id="menuOpener" class="ml-auto">
+        <i class="bi bi-list text-2xl flex dark:text-white xl:hidden"></i>
+      </button>
+
+      <nav
+        class="hidden xl:flex gap-16 items-center justify-center dark:text-white"
+      >
+        <ul class="flex gap-16 items-center justify-center">
+          <li>
+            <a href="#" class="hover:text-cyan-500 p-2 duration-150"
+              >TheRedHoodGuy?</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:text-cyan-500 p-2 duration-150">Prowess</a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-cyan-500 p-2 duration-150"
+              >Creations</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:text-cyan-500 p-2 duration-150"
+              >Expertise</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:text-cyan-500 p-2 duration-150"
+              >Talk to me</a
+            >
+          </li>
+        </ul>
+
+        <button
+          id="mode"
+          class="p-2 bg-white rounded-sm shadow-sm duration-300"
+        >
+          <i
+            id="switchThis"
+            class="bi bi-sun-fill flex text-xl duration-300"
+          ></i>
+        </button>
+      </nav>
+
+      <menu
+        id="menu"
+        class="xl:hidden absolute w-0 px-0 opacity-0 p-5 right-0 top-0 flex flex-col gap-8 bg-white dark:bg-[#2a273d] shadow-xl h-screen duration-100 overflow-hidden"
+      >
+        <button id="menuCloser" class="p-2 w-fit bg-xed ml-auto rounded-sm">
+          <i class="bi bi-x flex text-xl text-white"></i>
+        </button>
+        <nav class="flex h-full w-full">
+          <ul class="flex flex-col w-full h-full gap-3">
+            <li
+              class="flex w-full hover:-translate-y-1 hover:-translate-x-1 duration-150"
+            >
+              <a
+                class="p-3 bg-gray-200 dark:bg-[#35314dcf] dark:text-white bg-opacity-40 rounded-sm w-full"
+                href="#"
+                >TheRedHoodGuy?</a
+              >
+            </li>
+            <li
+              class="flex w-full hover:-translate-y-1 hover:-translate-x-1 duration-150"
+            >
+              <a
+                class="p-3 bg-gray-200 dark:bg-[#35314dcf] dark:text-white bg-opacity-40 rounded-sm w-full"
+                href="#"
+                >Prowess</a
+              >
+            </li>
+            <li
+              class="flex w-full hover:-translate-y-1 hover:-translate-x-1 duration-150"
+            >
+              <a
+                class="p-3 bg-gray-200 dark:bg-[#35314dcf] dark:text-white bg-opacity-40 rounded-sm w-full"
+                href="#"
+                >Creations</a
+              >
+            </li>
+            <li
+              class="flex w-full hover:-translate-y-1 hover:-translate-x-1 duration-150"
+            >
+              <a
+                class="p-3 bg-gray-200 dark:bg-[#35314dcf] dark:text-white bg-opacity-40 rounded-sm w-full"
+                href="#"
+                >Expertise</a
+              >
+            </li>
+            <li
+              class="flex w-full hover:-translate-y-1 hover:-translate-x-1 duration-150"
+            >
+              <a
+                class="p-3 bg-gray-200 dark:bg-[#35314dcf] dark:text-white bg-opacity-40 rounded-sm w-full"
+                href="https://wa.me/23407049628148"
+                target="_blank"
+                >Talk to me</a
+              >
+            </li>
+
+            <div class="flex w-full mt-auto gap-3">
+              <li
+                class="flex w-full mt-auto hover:-translate-y-1 hover:-translate-x-1 hover:shadow-sm duration-150"
+              >
+                <a
+                  class="p-3 bg-xed rounded-sm w-full flex items-center text-white font-medium"
+                  href="javaascript:void(0)"
+                  onclick="alert('CV Unavailable at the moment  :\)')"
+                  >Download CV
+                  <i
+                    class="bi bi-dot flex ml-auto text-3xl text-white animate-ping"
+                  ></i
+                ></a>
+              </li>
+              <button
+                id="mode"
+                class="p-3 bg-white rounded-sm shadow-sm duration-300"
+              >
+                <i
+                  id="switchThis"
+                  class="bi bi-sun-fill flex text-2xl duration-300"
+                ></i>
+              </button>
+            </div>
+          </ul>
+        </nav>
+      </menu>
+    </header>
+
+    <section
+      class="w-full h-screen flex justify-center items-center px-2 dark:bg-[#232034] dark:text-white lg:px-16 xl:px-24"
+    >
+      <main
+        class="flex flex-col gap-4 justify-center items-center overflow-hidden"
+      >
+        <div class="rounded-full w-80 overflow-hidden">
+          <img
+            src="me.png"
+            alt="Literally Me"
+            class="object-fill"
+            onmouseover="blobity.bounce()"
+            data-blobity-magnetic="true"
+            data-blobity-tooltip="Drew this myself :)"
+          />
+        </div>
+        <div
+          class="flex flex-col gap-4 xl:gap-8 justify-center items-center overflow-hidden"
+        >
+          <h1 class="text-3xl xl:text-5xl text-center">
+            I'm Xavier Okpalannajiaku
+          </h1>
+          <h2 class="text-2xl xl:text-4xl text-center">
+            The<span
+              class="text-xed"
+              onmouseover="blobity.bounce()"
+              data-blobity-magnetic="true"
+              data-blobity-tooltip="All is better in red"
+              >Red</span
+            >Hoodguy
+          </h2>
+          <h3 class="mt-4 xl:mt-8 text-lg xl:text-xl" id="element"></h3>
+          <script>
+            new TypeIt("#element", {
+              speed: 65,
+              loop: true,
+            })
+              .type("Fronten", { delay: 200 })
+              .delete(7)
+              .type("Fullstack Develle", { delay: 50 })
+              .delete(2)
+              .type("oper.", { delay: 3000 })
+              .delete(20)
+              .pause(1000)
+              .type("2D Animto", { delay: 150 })
+              .move(-2)
+              .type("a")
+              .move(2)
+              .type("r, Designer abd Artist")
+              .move(-8)
+              .delete(1)
+              .type("n")
+              .move(8)
+              .type(" :)", { delay: 3000 })
+              .delete(35)
+              .pause(1000)
+              .type("Cybersecurity Enthusiast...", { delay: 3000 })
+              .delete(27)
+              .pause(1000)
+              .go();
+          </script>
+        </div>
+      </main>
+    </section>
+
+    <section
+      class="w-full flex flex-col gap-10 justify-center items-center px-2 dark:bg-[#232034] dark:text-white py-10 lg:px-16 xl:px-24"
+    >
+      <h3 class="text-3xl xl:w-full xl:text-left">Versatility</h3>
+      <div class="xl:hidden w-full grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <!---->
+        <div
+          class="bg-white dark:bg-[#35314dcf] dark:text-white dark:outline-none outline outline-1 outline-gray-100 p-6 w-full rounded-sm flex flex-col gap-6"
+        >
+          <div class="w-full flex items-center justify-between">
+            <span class="font-medium">HTML5</span>
+            <span class="font-medium">75%</span>
+          </div>
+          <div
+            class="relative flex items-center overflow-hidden w-full outline outline-1 outline-xed p-[6px] px-0 rounded-sm after:absolute after:bg-xed after:w-[75%] after:p-[6px]"
+          ></div>
+        </div>
+        <!---->
+
+        <!---->
+        <div
+          class="bg-white dark:bg-[#35314dcf] dark:text-white dark:outline-none outline outline-1 outline-gray-100 p-6 w-full rounded-sm flex flex-col gap-6"
+        >
+          <div class="w-full flex items-center justify-between">
+            <span class="font-medium">CSS3</span>
+            <span class="font-medium">73%</span>
+          </div>
+          <div
+            class="relative flex items-center overflow-hidden w-full outline outline-1 outline-xed p-[6px] px-0 rounded-sm after:absolute after:bg-xed after:w-[73%] after:p-[6px]"
+          ></div>
+        </div>
+        <!---->
+
+        <!---->
+        <div
+          class="bg-white dark:bg-[#35314dcf] dark:text-white dark:outline-none outline outline-1 outline-gray-100 p-6 w-full rounded-sm flex flex-col gap-6"
+        >
+          <div class="w-full flex items-center justify-between">
+            <span class="font-medium">Javascript</span>
+            <span class="font-medium">34%</span>
+          </div>
+          <div
+            class="relative flex items-center overflow-hidden w-full outline outline-1 outline-xed p-[6px] px-0 rounded-sm after:absolute after:bg-xed after:w-[34%] after:p-[6px]"
+          ></div>
+        </div>
+        <!---->
+
+        <!---->
+        <div
+          class="bg-white dark:bg-[#35314dcf] dark:text-white dark:outline-none outline outline-1 outline-gray-100 p-6 w-full rounded-sm flex flex-col gap-6"
+        >
+          <div class="w-full flex items-center justify-between">
+            <span class="font-medium">TailwindCSS</span>
+            <span class="font-medium">55%</span>
+          </div>
+          <div
+            class="relative flex items-center overflow-hidden w-full outline outline-1 outline-xed p-[6px] px-0 rounded-sm after:absolute after:bg-xed after:w-[55%] after:p-[6px]"
+          ></div>
+        </div>
+        <!---->
+
+        <!---->
+        <div
+          class="bg-white dark:bg-[#35314dcf] dark:text-white dark:outline-none outline outline-1 outline-gray-100 p-6 w-full rounded-sm flex flex-col gap-6"
+        >
+          <div class="w-full flex items-center justify-between">
+            <span class="font-medium">ReactJS</span>
+            <span class="font-medium">10%</span>
+          </div>
+          <div
+            class="relative flex items-center overflow-hidden w-full outline outline-1 outline-xed p-[6px] px-0 rounded-sm after:absolute after:bg-xed after:w-[10%] after:p-[6px]"
+          ></div>
+        </div>
+        <!---->
+
+        <!---->
+        <div
+          class="bg-white dark:bg-[#35314dcf] dark:text-white dark:outline-none outline outline-1 outline-gray-100 p-6 w-full rounded-sm flex flex-col gap-6"
+        >
+          <div class="w-full flex items-center justify-between">
+            <span class="font-medium">C</span>
+            <span class="font-medium">15%</span>
+          </div>
+          <div
+            class="relative flex items-center overflow-hidden w-full outline outline-1 outline-xed p-[6px] px-0 rounded-sm after:absolute after:bg-xed after:w-[15%] after:p-[6px]"
+          ></div>
+        </div>
+        <!---->
+
+        <!---->
+        <div
+          class="bg-white dark:bg-[#35314dcf] dark:text-white dark:outline-none outline outline-1 outline-gray-100 p-6 w-full rounded-sm flex flex-col gap-6"
+        >
+          <div class="w-full flex items-center justify-between">
+            <span class="font-medium">C++</span>
+            <span class="font-medium">30%</span>
+          </div>
+          <div
+            class="relative flex items-center overflow-hidden w-full outline outline-1 outline-xed p-[6px] px-0 rounded-sm after:absolute after:bg-xed after:w-[30%] after:p-[6px]"
+          ></div>
+        </div>
+        <!---->
+
+        <!---->
+        <div
+          class="bg-white dark:bg-[#35314dcf] dark:text-white dark:outline-none outline outline-1 outline-gray-100 p-6 w-full rounded-sm flex flex-col gap-6"
+        >
+          <div class="w-full flex items-center justify-between">
+            <span class="font-medium">JAVA</span>
+            <span class="font-medium">45%</span>
+          </div>
+          <div
+            class="relative flex items-center overflow-hidden w-full outline outline-1 outline-xed p-[6px] px-0 rounded-sm after:absolute after:bg-xed after:w-[45%] after:p-[6px]"
+          ></div>
+        </div>
+        <!---->
+      </div>
+      <div class="grid-cols-8 gap-10 w-full justify-start hidden xl:grid">
+        <!---->
+        <div
+          onmouseover="blobity.bounce()"
+          data-blobity-magnetic="true"
+          data-blobity-tooltip="Started this in 2016"
+          class="col-span-4 border-l-4 border-l-xed p-4 flex justify-between items-center dark:bg-[#35314dcf] dark:text-white"
+        >
+          <div><span>HTML5</span></div>
+          <div
+            class="h-3 outline outline-1 outline-xed w-[70%] overflow-hidden relative after:h-3 after:absolute after:bg-xed after:w-[75%]"
+          ></div>
+          <div><span>75%</span></div>
+        </div>
+        <!---->
+
+        <!---->
+        <div
+          onmouseover="blobity.bounce()"
+          data-blobity-magnetic="true"
+          data-blobity-tooltip="Also started 2016"
+          class="col-span-4 border-l-4 border-l-xed p-4 flex justify-between items-center dark:bg-[#35314dcf] dark:text-white"
+        >
+          <div><span>CSS3</span></div>
+          <div
+            class="h-3 outline outline-1 outline-xed w-[70%] overflow-hidden relative after:h-3 after:absolute after:bg-xed after:w-[73%]"
+          ></div>
+          <div><span>73%</span></div>
+        </div>
+        <!---->
+
+        <!---->
+        <div
+          onmouseover="blobity.bounce()"
+          data-blobity-magnetic="true"
+          data-blobity-tooltip="Do i really know Javascript?"
+          class="col-span-4 border-l-4 border-l-xed p-4 flex justify-between items-center dark:bg-[#35314dcf] dark:text-white"
+        >
+          <div><span>Javascript</span></div>
+          <div
+            class="h-3 outline outline-1 outline-xed w-[70%] overflow-hidden relative after:h-3 after:absolute after:bg-xed after:w-[34%]"
+          ></div>
+          <div><span>34%</span></div>
+        </div>
+        <!---->
+
+        <!---->
+        <div
+          onmouseover="blobity.bounce()"
+          data-blobity-magnetic="true"
+          data-blobity-tooltip="TailwindCSS is the GOAT!!"
+          class="col-span-4 border-l-4 border-l-xed p-4 flex justify-between items-center dark:bg-[#35314dcf] dark:text-white"
+        >
+          <div><span>TailwindCSS</span></div>
+          <div
+            class="h-3 outline outline-1 outline-xed w-[70%] overflow-hidden relative after:h-3 after:absolute after:bg-xed after:w-[55%]"
+          ></div>
+          <div><span>55%</span></div>
+        </div>
+        <!---->
+
+        <!---->
+        <div
+          onmouseover="blobity.bounce()"
+          data-blobity-magnetic="true"
+          data-blobity-tooltip="React is harrddddddd :("
+          class="col-span-4 border-l-4 border-l-xed p-4 flex justify-between items-center dark:bg-[#35314dcf] dark:text-white"
+        >
+          <div><span>ReactJS</span></div>
+          <div
+            class="h-3 outline outline-1 outline-xed w-[70%] overflow-hidden relative after:h-3 after:absolute after:bg-xed after:w-[10%]"
+          ></div>
+          <div><span>10%</span></div>
+        </div>
+        <!---->
+
+        <!---->
+        <div
+          onmouseover="blobity.bounce()"
+          data-blobity-magnetic="true"
+          data-blobity-tooltip="Babcock Things"
+          class="col-span-4 border-l-4 border-l-xed p-4 flex justify-between items-center dark:bg-[#35314dcf] dark:text-white"
+        >
+          <div><span>C</span></div>
+          <div
+            class="h-3 outline outline-1 outline-xed w-[70%] overflow-hidden relative after:h-3 after:absolute after:bg-xed after:w-[15%]"
+          ></div>
+          <div><span>15%</span></div>
+        </div>
+        <!---->
+
+        <!---->
+        <div
+          onmouseover="blobity.bounce()"
+          data-blobity-magnetic="true"
+          data-blobity-tooltip="Learnt this to pass that exam ;)"
+          class="col-span-4 border-l-4 border-l-xed p-4 flex justify-between items-center dark:bg-[#35314dcf] dark:text-white"
+        >
+          <div><span>C++</span></div>
+          <div
+            class="h-3 outline outline-1 outline-xed w-[70%] overflow-hidden relative after:h-3 after:absolute after:bg-xed after:w-[30%]"
+          ></div>
+          <div><span>30%</span></div>
+        </div>
+        <!---->
+
+        <!---->
+        <div
+          onmouseover="blobity.bounce()"
+          data-blobity-magnetic="true"
+          data-blobity-tooltip="Still progressing for sft dev"
+          class="col-span-4 border-l-4 border-l-xed p-4 flex justify-between items-center dark:bg-[#35314dcf] dark:text-white"
+        >
+          <div><span>JAVA</span></div>
+          <div
+            class="h-3 outline outline-1 outline-xed w-[70%] overflow-hidden relative after:h-3 after:absolute after:bg-xed after:w-[35%]"
+          ></div>
+          <div><span>35%</span></div>
+        </div>
+        <!---->
+      </div>
+      <div class="p-[1px] bg-xed w-full my-4"></div>
+      <div class="w-full grid grid-col-1 lg:grid-cols-2 xl:grid-cols-8 gap-4">
+        <!-- Grid 1 | Web Developer -->
+        <div
+          onmouseover="blobity.bounce()"
+          data-blobity-magnetic="true"
+          data-blobity-tooltip="Skill Number One, "
+          class="text-sm rounded-sm border-l-2 cursor-pointer hover:border-[#FF0000] dark:bg-[#35314dcf] dark:text-white dark:outline-none dark:border-l-xed p-8 flex flex-col gap-4 col-span-1 xl:col-span-3 row-span-1 outline outline-1 outline-gray-100 duration-150 group"
+        >
+          <div
+            class="flex text-4xl text-[#FF0000] group-hover:text-gray-800 duration-100"
+          >
+            <i class="bi bi-code-slash"></i>
+            <em class="text-sm ml-auto text-gray-700 dark:text-slate-500">
+              - Since 2018</em
+            >
+          </div>
+          <div class="text-2xl">
+            <h2 class="group-hover:text-[#FF0000]">Web Developer</h2>
+          </div>
+          <div
+            class="text-gray-400 group-hover:text-black dark:group-hover:text-slate-500"
+          >
+            As a skilled web developer, I specialize in creating modern,
+            responsive, and user-friendly websites and web applications with
+            HTML5, CSS3, VanillaJS, ReactJS and TailwindCSS.
+          </div>
+        </div>
+        <!-- Grid 1 -->
+
+        <!-- Grid 2 | Web Designer -->
+        <div
+          onmouseover="blobity.bounce()"
+          data-blobity-magnetic="true"
+          data-blobity-tooltip="Skill Number 2, "
+          class="text-sm rounded-sm border-l-2 cursor-pointer hover:border-[#FF0000] dark:bg-[#35314dcf] dark:text-white dark:outline-none dark:border-l-xed p-8 flex flex-col gap-4 col-span-1 xl:col-span-3 row-span-1 outline outline-1 outline-gray-100 duration-150 group"
+        >
+          <div
+            class="flex text-4xl text-[#FF0000] group-hover:text-gray-800 duration-100"
+          >
+            <i class="bi bi-palette-fill"></i>
+            <em class="text-sm ml-auto text-gray-700 dark:text-slate-500">
+              - Since 2021</em
+            >
+          </div>
+          <div class="text-2xl">
+            <h2 class="group-hover:text-[#FF0000]">Web Designer</h2>
+          </div>
+          <div
+            class="text-gray-400 group-hover:text-black dark:group-hover:text-slate-500"
+          >
+            I possesy user experience (UX) design skills including user
+            research, wireframing, prototyping, and usability testing to create
+            user-friendly interfaces with canva and figma.
+          </div>
+        </div>
+        <!-- Grid 2 -->
+
+        <!-- Grid 3 | Musician -->
+        <div
+          onmouseover="blobity.bounce()"
+          data-blobity-magnetic="true"
+          data-blobity-tooltip="Skill Number 3, "
+          class="text-sm rounded-sm border-l-2 cursor-pointer hover:border-[#FF0000] dark:bg-[#35314dcf] dark:text-white dark:outline-none dark:border-l-xed p-8 flex flex-col gap-4 col-span-1 xl:col-span-2 row-span-1 xl:row-span-2 outline outline-1 outline-gray-100 duration-150 group"
+        >
+          <div
+            class="flex text-4xl text-[#FF0000] group-hover:text-gray-800 duration-100"
+          >
+            <i class="bi bi-music-note-beamed"></i>
+            <em class="text-sm ml-auto text-gray-700 dark:text-slate-500">
+              - 2016 - mid 2019</em
+            >
+          </div>
+          <div class="text-2xl">
+            <h2 class="group-hover:text-[#FF0000]">Pianist</h2>
+          </div>
+          <div
+            class="text-gray-400 group-hover:text-black dark:group-hover:text-slate-500"
+          >
+            I can also express excellent musicality and interpretation skills to
+            convey the emotion and meaning of the music and ability to
+            collaborate with other musicians as an accompanist or chamber
+            musician.
+          </div>
+        </div>
+        <!-- Grid 3 -->
+
+        <!-- Grid 4 | Graphic Designer -->
+        <div
+          onmouseover="blobity.bounce()"
+          data-blobity-magnetic="true"
+          data-blobity-tooltip="The List goes on brev"
+          class="text-sm rounded-sm border-l-2 cursor-pointer hover:border-[#FF0000] dark:bg-[#35314dcf] dark:text-white dark:outline-none dark:border-l-xed p-8 flex flex-col gap-4 col-span-1 xl:col-span-3 row-span-1 outline outline-1 outline-gray-100 duration-150 group"
+        >
+          <div
+            class="flex text-4xl text-[#FF0000] group-hover:text-gray-800 duration-100"
+          >
+            <i class="bi bi-paint-bucket"></i>
+            <em class="text-sm ml-auto text-gray-700 dark:text-slate-500">
+              - Since 2021</em
+            >
+          </div>
+          <div class="text-2xl">
+            <h2 class="group-hover:text-[#FF0000]">Graphic Designer</h2>
+          </div>
+          <div
+            class="text-gray-400 group-hover:text-black dark:group-hover:text-slate-500"
+          >
+            Proficiency in graphic design software including Canva, Adobe
+            Photoshop, and Pixelmator to create logos, social media graphics,
+            flyers, and other marketing materials.
+          </div>
+        </div>
+        <!-- Grid 4 -->
+
+        <!-- Grid 5 | Animator -->
+        <div
+          onmouseover="blobity.bounce()"
+          data-blobity-magnetic="true"
+          data-blobity-tooltip="One guy, 5 skills. Shey you dey whine me ni"
+          class="text-sm rounded-sm border-l-2 cursor-pointer hover:border-[#FF0000] dark:bg-[#35314dcf] dark:text-white dark:outline-none dark:border-l-xed p-8 flex flex-col gap-4 col-span-1 xl:col-span-3 row-span-1 outline outline-1 outline-gray-100 duration-150 group"
+        >
+          <div
+            class="flex text-4xl text-[#FF0000] group-hover:text-gray-800 duration-100"
+          >
+            <i class="bi bi-pencil-fill"></i>
+            <em class="text-sm ml-auto text-gray-700 dark:text-slate-500">
+              - Since 2019</em
+            >
+          </div>
+          <div class="text-2xl">
+            <h2 class="group-hover:text-[#FF0000]">Animator</h2>
+          </div>
+          <div
+            class="text-gray-400 group-hover:text-black dark:group-hover:text-slate-500"
+          >
+            Experienced in 3D Animation with Blender (Beginner - 3 years) and 2D
+            Animation using Adobe Flash, Macromedia Flash 8, Adobe Animate,
+            Flipaclip, Krita, Pencil 2D, Roughanimator, and Ibis Paint X.
+          </div>
+        </div>
+        <!-- Grid 5 -->
+      </div>
+    </section>
+
+    <section
+      class="w-full flex flex-col gap-10 items-center justify-center px-2 pt-16 dark:bg-[#221f32] dark:text-white lg:px-16 xl:px-28"
+    >
+      <h3 class="text-3xl xl:w-full xl:text-left">
+        My <span class="text-xed">Actual</span> Shit
+      </h3>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full xl:hidden">
+        <!---->
+        <div
+          class="w-full flex flex-col gap-6 p-4 rounded-sm overflow-hidden outline outline-1 outline-gray-200 bg-white dark:bg-[#35314dcf] dark:text-white dark:outline-none"
+        >
+          <div class="w-full rounded-sm overflow-hidden">
+            <img src="/images/desktop-preview - 1.jpg" alt="Preview One" />
+          </div>
+          <div class="w-full flex flex-col gap-3">
+            <h4 class="text-xl font-medium">Interactive Rating component</h4>
+            <p>A simple 5 star Rating component for webpages.</p>
+            <span class="ml-auto text-gray-500 text-md dark:text-slate-500"
+              >HTML5 | TailwindCSS | JS</span
+            >
+          </div>
+          <div class="flex flex-col gap-3 w-full">
+            <a
+              target="_blank"
+              href="https://github.com/TheRedHoodGuy/interactive-rating-component"
+              class="flex gap-3 p-[11px] justify-center items-center bg-white outline outline-1 outline-xed rounded-sm text-xed dark:bg-[#3c3856cf] dark:bg-opacity-25 dark:text-white dark:outline-none"
+              >View Code on gitHub <i class="bi bi-box-arrow-up-right"></i
+            ></a>
+            <a
+              target="_blank"
+              href="https://theredhoodguy.github.io/interactive-rating-component/"
+              class="flex gap-3 p-3 justify-center items-center bg-xed rounded-sm text-white"
+              >View Live Page <i class="bi bi-box-arrow-up-right"></i
+            ></a>
+          </div>
+        </div>
+        <!---->
+
+        <!---->
+        <div
+          class="w-full flex flex-col gap-6 p-4 rounded-sm overflow-hidden outline outline-1 outline-gray-200 bg-white dark:bg-[#35314dcf] dark:text-white dark:outline-none"
+        >
+          <div class="w-full rounded-sm overflow-hidden">
+            <img src="/images/desktop-preview - 2.jpg" alt="Preview One" />
+          </div>
+          <div class="w-full flex flex-col gap-3">
+            <h4 class="text-xl font-medium">Omelette recipe page</h4>
+            <p>A simple responsive recipe page for an omelette.</p>
+            <span class="ml-auto text-gray-500 text-md dark:text-slate-500"
+              >HTML5 | TailwindCSS</span
+            >
+          </div>
+          <div class="flex flex-col gap-3 w-full">
+            <a
+              target="_blank"
+              href="https://github.com/TheRedHoodGuy/social-links-page"
+              class="flex gap-3 p-[11px] justify-center items-center bg-white outline outline-1 outline-xed rounded-sm text-xed dark:bg-[#3c3856cf] dark:bg-opacity-25 dark:text-white dark:outline-none"
+              >View Code on gitHub <i class="bi bi-box-arrow-up-right"></i
+            ></a>
+            <a
+              target="_blank"
+              href="https://theredhoodguy.github.io/social-links-page/"
+              class="flex gap-3 p-3 justify-center items-center bg-xed rounded-sm text-white"
+              >View Live Page <i class="bi bi-box-arrow-up-right"></i
+            ></a>
+          </div>
+        </div>
+        <!---->
+
+        <!---->
+        <div
+          class="w-full flex flex-col gap-6 p-4 rounded-sm overflow-hidden outline outline-1 outline-gray-200 bg-white dark:bg-[#35314dcf] dark:text-white dark:outline-none"
+        >
+          <div class="w-full rounded-sm overflow-hidden">
+            <img src="/images/desktop-preview - 3.jpg" alt="Preview One" />
+          </div>
+          <div class="w-full flex flex-col gap-3">
+            <h4 class="text-xl font-medium">Social links page</h4>
+            <p>
+              A page showcasing every single link to where I am accesible on,
+              you shoucl check it out.
+            </p>
+            <span class="ml-auto text-gray-500 text-md dark:text-slate-500"
+              >HTML5 | TailwindCSS</span
+            >
+          </div>
+          <div class="flex flex-col gap-3 w-full">
+            <a
+              target="_blank"
+              href="https://github.com/TheRedHoodGuy/recipe-page-simple"
+              class="flex gap-3 p-[11px] justify-center items-center bg-white outline outline-1 outline-xed rounded-sm text-xed dark:bg-[#3c3856cf] dark:bg-opacity-25 dark:text-white dark:outline-none"
+              >View Code on gitHub <i class="bi bi-box-arrow-up-right"></i
+            ></a>
+            <a
+              target="_blank"
+              href="https://theredhoodguy.github.io/recipe-page-simple/"
+              class="flex gap-3 p-3 justify-center items-center bg-xed rounded-sm text-white"
+              >View Live Page <i class="bi bi-box-arrow-up-right"></i
+            ></a>
+          </div>
+        </div>
+        <!---->
+
+        <!---->
+        <div
+          class="w-full flex flex-col gap-6 p-4 rounded-sm overflow-hidden outline outline-1 outline-gray-200 bg-white dark:bg-[#35314dcf] dark:text-white dark:outline-none"
+        >
+          <div class="w-full rounded-sm overflow-hidden">
+            <img src="/images/desktop-preview - 5.jpg" alt="Preview One" />
+          </div>
+          <div class="w-full flex flex-col gap-3">
+            <h4 class="text-xl font-medium">Newsletter signup page</h4>
+            <p>
+              A simple sign up component that prompts user for email, verifies
+              the email, and displays corresponding error/success messages.
+            </p>
+            <span class="ml-auto text-gray-500 text-md dark:text-slate-500"
+              >HTML5 | TailwindCSS | JS</span
+            >
+          </div>
+          <div class="flex flex-col gap-3 w-full">
+            <a
+              target="_blank"
+              href="#"
+              class="flex gap-3 p-[11px] justify-center items-center bg-white outline outline-1 outline-xed rounded-sm text-xed dark:bg-[#3c3856cf] dark:bg-opacity-25 dark:text-white dark:outline-none"
+              >View Code on gitHub <i class="bi bi-box-arrow-up-right"></i
+            ></a>
+            <a
+              target="_blank"
+              href="#"
+              class="flex gap-3 p-3 justify-center items-center bg-xed rounded-sm text-white"
+              >View Live Page <i class="bi bi-box-arrow-up-right"></i
+            ></a>
+          </div>
+        </div>
+        <!---->
+
+        <!---->
+        <div
+          class="w-full flex flex-col gap-6 p-4 rounded-sm overflow-hidden outline outline-1 outline-gray-200 bg-white dark:bg-[#35314dcf] dark:text-white dark:outline-none"
+        >
+          <div class="w-full rounded-sm overflow-hidden">
+            <img src="/images/desktop-preview - 6.jpg" alt="Preview One" />
+          </div>
+          <div class="w-full flex flex-col gap-3">
+            <h4 class="text-xl font-medium">News Forum page</h4>
+            <p>
+              A quite complex new landing page which implements the grid system
+              to ensure responsiveness.
+            </p>
+            <span class="ml-auto text-gray-500 text-md dark:text-slate-500"
+              >HTML5 | TailwindCSS | JS | React</span
+            >
+          </div>
+          <div class="flex flex-col gap-3 w-full">
+            <a
+              target="_blank"
+              href="https://github.com/TheRedHoodGuy/simple-webpage-with-react"
+              class="flex gap-3 p-[11px] justify-center items-center bg-white outline outline-1 outline-xed rounded-sm text-xed dark:bg-[#3c3856cf] dark:bg-opacity-25 dark:text-white dark:outline-none"
+              >View Code on gitHub <i class="bi bi-box-arrow-up-right"></i
+            ></a>
+            <a
+              target="_blank"
+              href="https://trhg-news-landing-page.vercel.app/"
+              class="flex gap-3 p-3 justify-center items-center bg-xed rounded-sm text-white"
+              >View Live Page <i class="bi bi-box-arrow-up-right"></i
+            ></a>
+          </div>
+        </div>
+        <!---->
+      </div>
+      <div class="grid-cols-3 gap-10 w-full hidden xl:grid">
+        <!---->
+        <div
+          class="rounded-xl overflow-hidden relative h-fit shadow-lg group cursor-pointer hover:-translate-x-1 hover:-translate-y-2 hover:shadow-xl duration-100"
+        >
+          <div
+            class="relative h-64 flex justify-center items-center overflow-hidden group"
+          >
+            <span
+              class="absolute z-30 bg-[#FF0000] h-[9999px] -translate-x-48 -translate-y-48 group-hover:translate-y-48 group-hover:translate-x-48 duration-500 ease-in-out p-4 rotate-45"
+            ></span>
+
+            <img
+              src="/images/desktop-preview - 1.jpg"
+              alt="Desktop Design - Newsletter SignUp Page"
+            />
+            <div
+              class="z-10 bg-black bg-opacity-55 backdrop-blur-md absolute shadow-lg opacity-0 h-full overflow-hidden p-6 py-0 group-hover:p-6 group-hover:opacity-100 duration-100 flex flex-col justify-center items-center text-white text-sm w-full"
+            >
+              <h5 class="text-xl font-medium mb-6">
+                Interactive Rating Component
+              </h5>
+              <p class="w-full flex justify-center items-center text-center">
+                A simple interactive rating component, with js
+              </p>
+
+              <div class="w-full flex mt-8 gap-8 justify-center items-center">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="rounded-full hover:bg-white outline outline-1 outline-white hover:text-[#FF0000] duration-150 py-2 px-3 bg-transparent text-white"
+                  >View on GitHub</a
+                >
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="rounded-full hover:bg-white hover:shadow-md hover:text-[#FF0000] duration-150 py-2 px-3 bg-transparent outline outline-1 outline-white text-white"
+                  >View Live Page
+                  <i class="bi bi-box-arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!---->
+
+        <!---->
+        <div
+          class="rounded-xl overflow-hidden relative h-fit shadow-lg group cursor-pointer hover:-translate-x-1 hover:-translate-y-2 hover:shadow-xl duration-100"
+        >
+          <div
+            class="relative h-64 flex justify-center items-center overflow-hidden group"
+          >
+            <span
+              class="absolute z-30 bg-[#FF0000] h-[9999px] -translate-x-48 -translate-y-48 group-hover:translate-y-48 group-hover:translate-x-48 duration-500 ease-in-out p-4 rotate-45"
+            ></span>
+
+            <img
+              src="/images/desktop-preview - 2.jpg"
+              alt="Desktop Design - Newsletter SignUp Page"
+            />
+            <div
+              class="z-10 bg-black bg-opacity-55 backdrop-blur-md absolute shadow-lg opacity-0 h-full overflow-hidden p-6 py-0 group-hover:p-6 group-hover:opacity-100 duration-100 flex flex-col justify-center items-center text-white text-sm w-full"
+            >
+              <h5 class="text-xl font-medium mb-6">Omelette recipe page</h5>
+              <p class="w-full flex justify-center items-center text-center">
+                A simple responsive recipe page
+              </p>
+
+              <div class="w-full flex mt-8 gap-8 justify-center items-center">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="rounded-full hover:bg-white outline outline-1 outline-white hover:text-[#FF0000] duration-150 py-2 px-3 bg-transparent text-white"
+                  >View on GitHub</a
+                >
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="rounded-full hover:bg-white hover:shadow-md hover:text-[#FF0000] duration-150 py-2 px-3 bg-transparent outline outline-1 outline-white text-white"
+                  >View Live Page
+                  <i class="bi bi-box-arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!---->
+
+        <!---->
+        <div
+          class="rounded-xl overflow-hidden relative h-fit shadow-lg group cursor-pointer hover:-translate-x-1 hover:-translate-y-2 hover:shadow-xl duration-100"
+        >
+          <div
+            class="relative h-64 flex justify-center items-center overflow-hidden group"
+          >
+            <span
+              class="absolute z-30 bg-[#FF0000] h-[9999px] -translate-x-48 -translate-y-48 group-hover:translate-y-48 group-hover:translate-x-48 duration-500 ease-in-out p-4 rotate-45"
+            ></span>
+
+            <img
+              src="/images/desktop-preview - 3.jpg"
+              alt="Desktop Design - Newsletter SignUp Page"
+            />
+            <div
+              class="z-10 bg-black bg-opacity-55 backdrop-blur-md absolute shadow-lg opacity-0 h-full overflow-hidden p-6 py-0 group-hover:p-6 group-hover:opacity-100 duration-100 flex flex-col justify-center items-center text-white text-sm w-full"
+            >
+              <h5 class="text-xl font-medium mb-6">Social Links page</h5>
+              <p class="w-full flex justify-center items-center text-center">
+                A page with links to every possible way I acn be accesible, You
+                should check it out
+              </p>
+
+              <div class="w-full flex mt-8 gap-8 justify-center items-center">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="rounded-full hover:bg-white outline outline-1 outline-white hover:text-[#FF0000] duration-150 py-2 px-3 bg-transparent text-white"
+                  >View on GitHub</a
+                >
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="rounded-full hover:bg-white hover:shadow-md hover:text-[#FF0000] duration-150 py-2 px-3 bg-transparent outline outline-1 outline-white text-white"
+                  >View Live Page
+                  <i class="bi bi-box-arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!---->
+
+        <!---->
+        <div
+          class="rounded-xl overflow-hidden relative h-fit shadow-lg group cursor-pointer hover:-translate-x-1 hover:-translate-y-2 hover:shadow-xl duration-100"
+        >
+          <div
+            class="relative h-64 flex justify-center items-center overflow-hidden group"
+          >
+            <span
+              class="absolute z-30 bg-[#FF0000] h-[9999px] -translate-x-48 -translate-y-48 group-hover:translate-y-48 group-hover:translate-x-48 duration-500 ease-in-out p-4 rotate-45"
+            ></span>
+
+            <img
+              src="/images/desktop-preview - 5.jpg"
+              alt="Desktop Design - Newsletter SignUp Page"
+            />
+            <div
+              class="z-10 bg-black bg-opacity-55 backdrop-blur-md absolute shadow-lg opacity-0 h-full overflow-hidden p-6 py-0 group-hover:p-6 group-hover:opacity-100 duration-100 flex flex-col justify-center items-center text-white text-sm w-full"
+            >
+              <h5 class="text-xl font-medium mb-6">Newsletter Signup page</h5>
+              <p class="w-full flex justify-center items-center text-center">
+                A simple interactive newsletter signup page made with js, with
+                corresponding success/error messages
+              </p>
+
+              <div class="w-full flex mt-8 gap-8 justify-center items-center">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="rounded-full hover:bg-white outline outline-1 outline-white hover:text-[#FF0000] duration-150 py-2 px-3 bg-transparent text-white"
+                  >View on GitHub</a
+                >
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="rounded-full hover:bg-white hover:shadow-md hover:text-[#FF0000] duration-150 py-2 px-3 bg-transparent outline outline-1 outline-white text-white"
+                  >View Live Page
+                  <i class="bi bi-box-arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!---->
+
+        <!---->
+        <div
+          class="rounded-xl overflow-hidden relative h-fit shadow-lg group cursor-pointer hover:-translate-x-1 hover:-translate-y-2 hover:shadow-xl duration-100"
+        >
+          <div
+            class="relative h-64 flex justify-center items-center overflow-hidden group"
+          >
+            <span
+              class="absolute z-30 bg-[#FF0000] h-[9999px] -translate-x-48 -translate-y-48 group-hover:translate-y-48 group-hover:translate-x-48 duration-500 ease-in-out p-4 rotate-45"
+            ></span>
+
+            <img
+              src="/images/desktop-preview - 6.jpg"
+              alt="Desktop Design - Newsletter SignUp Page"
+            />
+            <div
+              class="z-10 bg-black bg-opacity-55 backdrop-blur-md absolute shadow-lg opacity-0 h-full overflow-hidden p-6 py-0 group-hover:p-6 group-hover:opacity-100 duration-100 flex flex-col justify-center items-center text-white text-sm w-full"
+            >
+              <h5 class="text-xl font-medium mb-6">News Landing Page</h5>
+              <p class="w-full flex justify-center items-center text-center">
+                A pretty complex news landing page, mad with ReactJS,
+                implementing "UseState".
+              </p>
+
+              <div class="w-full flex mt-8 gap-8 justify-center items-center">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="rounded-full hover:bg-white outline outline-1 outline-white hover:text-[#FF0000] duration-150 py-2 px-3 bg-transparent text-white"
+                  >View on GitHub</a
+                >
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="rounded-full hover:bg-white hover:shadow-md hover:text-[#FF0000] duration-150 py-2 px-3 bg-transparent outline outline-1 outline-white text-white"
+                  >View Live Page
+                  <i class="bi bi-box-arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!---->
+
+        <div
+          onmouseover="blobity.bounce()"
+          data-blobity-magnetic="true"
+          data-blobity-tooltip="What is it?, haven't I done enough"
+          class="relative overflow-hidden h-64 flex flex-col gap-5 text-center justify-center items-center outline-1 outline-dashed outline-xed rounded-sm group hover:-translate-x-1 hover:-translate-y-1 hover:shadow-lg duration-150"
+        >
+          <span
+            class="p-0 group-hover:p-[300px] duration-500 bg-xed rounded-full absolute"
+          ></span>
+          <i
+            class="bi bi-plus flex text-3xl text-xed z-10 group-hover:text-white duration-150"
+          ></i>
+          <div class="relative flex justify-center items-center w-full">
+            <span class="text-xed">more to come</span>
+            <span
+              class="text-white absolute opacity-0 group-hover:opacity-100 duration-200"
+              >There's Literally nothing here</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="w-full flex flex-col xl:flex-row gap-16 items-center justify-center px-2 pt-16 xl:pt-32 dark:bg-[#232034] dark:text-white lg:px-16 xl:px-24"
+    >
+      <div
+        onmouseover="blobity.bounce()"
+        data-blobity-magnetic="true"
+        data-blobity-tooltip="Half completed, The cycle continues"
+        class="w-full flex flex-col justify-center items-center gap-4"
+      >
+        <span class="text-xed text-7xl">12+</span>
+        <p class="text-gray-400">Projects Worked on</p>
+      </div>
+      <div
+        onmouseover="blobity.bounce()"
+        data-blobity-magnetic="true"
+        data-blobity-tooltip="Someone said my site is nice :)"
+        class="w-full flex flex-col justify-center items-center gap-4"
+      >
+        <span class="text-xed text-7xl">15+</span>
+        <p class="text-gray-400">Positive Feedback</p>
+      </div>
+      <div
+        onmouseover="blobity.bounce()"
+        data-blobity-magnetic="true"
+        data-blobity-tooltip="i didn't spam, I swear"
+        class="w-full flex flex-col justify-center items-center gap-4"
+      >
+        <span class="text-xed text-7xl">300+</span>
+        <p class="text-gray-400">Linkedin Connections</p>
+      </div>
+      <div
+        onmouseover="blobity.bounce()"
+        data-blobity-magnetic="true"
+        data-blobity-tooltip="And I'm proud of it"
+        class="w-full flex flex-col justify-center items-center gap-4"
+      >
+        <span class="text-xed text-7xl">1</span>
+        <p class="text-gray-400">Certification</p>
+      </div>
+    </section>
+
+    <section
+      class="w-full flex flex-col gap-8 xl:gap-12 items-center justify-center px-2 pt-32 pb-10 dark:bg-[#232034] dark:text-white lg:px-16 xl:px-24"
+    >
+      <h3
+        onmouseover="blobity.bounce()"
+        data-blobity-magnetic="true"
+        data-blobity-tooltip="I don't bite, sometimes"
+        class="text-xl text-xed"
+      >
+        Let's work together?
+      </h3>
+      <ul
+        class="w-full flex flex-col xl:flex-row gap-10 xl:gap-16 p-4 justify-center items-center"
+      >
+        <li>
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/xavier-okpalannajiaku-8a07812bb/"
+            class="flex flex-col gap-2 items-center text-gray-500 dark:text-gray-400 hover:text-black p-2 dark:hover:text-white"
+            ><i class="bi bi-linkedin text-2xl"></i>Okpalannajiaku Xavier
+            Chimezie</a
+          >
+        </li>
+
+        <li>
+          <a
+            target="_blank"
+            href="mailto:trhg.xavierokpalannajiaku.mez@gmail.com"
+            class="flex flex-col gap-2 items-center text-gray-500 dark:text-gray-400 hover:text-black p-2 dark:hover:text-white"
+            ><i class="bi bi-envelope text-2xl"></i
+            >trhg.xavierokpalannajiaku.mez@gmail.com</a
+          >
+        </li>
+
+        <li>
+          <a
+            onmouseover="blobity.bounce()"
+            data-blobity-magnetic="true"
+            data-blobity-tooltip="DO NOT CALL ME!!"
+            target="_blank"
+            href="https://wa.me/23407049628148"
+            class="flex flex-col gap-2 items-center text-gray-500 dark:text-gray-400 hover:text-black p-2 dark:hover:text-white"
+            ><i class="bi bi-whatsapp text-2xl"></i>+234 070 4962 8148</a
+          >
+        </li>
+
+        <li>
+          <a
+            target="_blank"
+            href="https://www.instagram.com/xavier.draws.stuff/"
+            class="flex flex-col gap-2 items-center text-gray-500 dark:text-gray-400 hover:text-black p-2 dark:hover:text-white"
+            ><i class="bi bi-instagram text-2xl"></i>Xavier.Draws.Stuff</a
+          >
+        </li>
+      </ul>
+    </section>
+
+    <footer
+      class="text-xs w-full justify-center items-center text-center p-4 flex bg-slate-600 text-white dark:bg-[#2c2940] dark:text-slate-500"
+    >
+      <span
+        >Designed and Developed by |
+        <span>Okpalannajiaku Xavier Chimezie</span>. © TheRedHoodGuy 2024</span
+      >
+    </footer>
+  </body>
+</html>
